@@ -3,8 +3,7 @@ const About = () => {
     <div className="container mt-5">
       <div className="row align-items-center">
         <div className="col-md-6">
-          <img 
-            src="/src/assets/images/about.jpg" 
+          <img src="/about.jpg" className="img-fluid rounded shadow" alt="About Us" /> 
             className="img-fluid rounded shadow" 
             alt="About Us" 
           />
