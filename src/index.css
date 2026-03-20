@@ -1,0 +1,92 @@
+/* 1. Basic Reset & Background */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Light grey background for e-commerce feel */
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* --- ADDED FOR MOBILE PWA --- */
+/* Apply only on mobile and tablets (below lg breakpoint) */
+@media (max-width: 991.98px) {
+  body {
+    padding-bottom: 70px; /* Provides space so content isn't hidden by the bottom nav */
+  }
+}
+
+/* Smooth Fade-Up Animation for a native app feel */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Header Text */
+@media (max-width: 991.98px) {
+  .store-title {
+    font-size: 1.5rem;
+  }
+  .store-subtitle {
+    font-size: 0.9rem;
+  }
+}
+/* --------------------------------------- */
+
+/* 2. Product Image Container */
+.product-img-wrapper {
+  position: relative;
+  overflow: hidden; /* Hides the image when it zooms */
+  height: 250px;    /* Keeps all product images the same height */
+  background-color: #fff;
+}
+
+/* 3. The Hover Zoom Effect */
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents image stretching */
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-img-wrapper:hover .product-img {
+  transform: scale(1.1); /* Zooms in 10% on hover */
+}
+
+/* 4. The Sale Badge */
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff4757; /* Shopee-style Red */
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 1; 
+}
+
+/* 5. Card Styling */
+.card {
+  border: none;
+  transition: box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Subtle shadow on hover */
+}
+
+/* 6. Star Ratings */
+.fa-star {
+  font-size: 0.9rem;
+}
