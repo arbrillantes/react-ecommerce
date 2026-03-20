@@ -1,29 +1,33 @@
-import { useEffect, useState } from "react";
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
 const Sidebar = () => {
-  // State to store categories from the backend
-  const [categories, setCategories] = useState([]);
+  const { filterCategory, setFilterCategory } = useContext(CartContext);
 
-  // Fetch categories from the backend API when the component loads
-  useEffect(() => {
-    fetch("http://localhost:5000/api/categories")
-      .then((res) => res.json())
-      .then((data) => {
-        setCategories(data); // Save unique categories into state
-      })
-      .catch((error) => {
-        console.error("Error fetching categories:", error);
-      });
-  }, []);
+  // Hardcoded categories based on fakestoreapi data for reliability
+  const categories = [
+    "all",
+    "electronics",
+    "jewelery",
+    "men's clothing",
+    "women's clothing"
+  ];
 
   return (
-    <aside className="bg-light p-3 shadow-sm rounded">
-      <h5>Categories</h5>
-      <ul className="list-group">
-        {/* Dynamically render the list of categories using .map() */}
-        {categories.map((category, index) => (
-          <li key={index} className="list-group-item list-group-item-action" style={{ cursor: 'pointer' }}>
-            {category}
+    <aside className="bg-dark p-3 shadow-sm rounded border border-secondary">
+      <h5 className="text-white mb-3">
+        <i className="fas fa-filter me-2 text-success"></i>
+        Categories
+      </h5>
+      <ul className="list-group list-group-flush">
+        {categories.map((category) => (
+          <li 
+            key={category} 
+            onClick={() => setFilterCategory(category)}
+            className={`list-group-item list-group-item-action bg-dark text-white border-secondary ${filterCategory === category ? 'active bg-success border-success' : ''}`}
+            style={{ cursor: 'pointer' }}
+          >
+            {category === 'all' ? 'All Products' : category.charAt(0).toUpperCase() + category.slice(1)}
           </li>
         ))}
       </ul>

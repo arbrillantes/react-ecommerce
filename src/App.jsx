@@ -13,6 +13,7 @@ import Contact from './pages/Contact.jsx';
 import Policies from './pages/Policies.jsx';
 import Cart from './pages/Cart.jsx';
 import Checkout from './pages/Checkout.jsx';
+import Favorites from './pages/Favorites.jsx';
 
 function App() {
   return (
@@ -101,6 +102,7 @@ function App() {
           <Route path="/policies" element={<Policies />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </main>
 

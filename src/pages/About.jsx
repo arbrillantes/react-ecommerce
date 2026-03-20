@@ -10,19 +10,18 @@ const About = () => {
           />
         </div>
         <div className="col-md-6">
-          <h2 className="fw-bold">About Our Store</h2>
+          <h2 className="fw-bold">About Level Up Gear</h2>
           <p className="text-muted mt-3">
-            Welcome to E-Shop, your number one source for all things tech. 
-            We're dedicated to giving you the very best of gadgets, with a 
-            focus on quality, price, and customer service.
+            Welcome to Level Up Gear, your number one source for pro-grade gaming peripherals and accessories. 
+            We're dedicated to giving you the very best in gaming hardware, with a 
+            focus on performance, durability, and competitive pricing.
           </p>
           <p className="text-muted">
-            Founded in 2026, E-Shop has come a long way from its beginnings. 
-            When we first started out, our passion for affordable technology 
-            drove us to quit our day jobs so that E-Shop can offer you the 
-            world's most advanced devices.
+            Founded in 2026, Level Up Gear has come a long way from its beginnings. 
+            When we first started out, our passion for esports and gaming culture 
+            drove us to build a store that offers every player the tools they need to dominate the leaderboard.
           </p>
-          <button className="btn btn-primary px-4 py-2">Learn More</button>
+          <button className="btn btn-primary px-4 py-2">Shop Now</button>
         </div>
       </div>
     </div>
