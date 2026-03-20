@@ -5,8 +5,7 @@ const About = () => {
         <div className="col-md-6">
           <img src="/about.jpg" className="img-fluid rounded shadow" alt="About Us" /> 
             className="img-fluid rounded shadow" 
-            alt="About Us" 
-          />
+            alt="About Us"      
         </div>
         <div className="col-md-6">
           <h2 className="fw-bold">About Level Up Gear</h2>
